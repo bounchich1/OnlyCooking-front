@@ -1,0 +1,34 @@
+@import "/src/ui/scss/variables";
+@import "/src/ui/scss/mixins";
+
+.header-container {
+  @include flex-between;
+
+  align-items: center;
+  justify-content: center;
+  gap: 15rem;
+  padding-top: 2rem;
+  width: 100%;
+
+  &__nav-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+
+  }
+  &__search {
+    @include flex-full-center;
+    flex-direction: row;
+    gap: 2rem;
+
+    &-icon {
+      @include flex-full-center;
+
+      border-radius: 10rem;
+      width: 3.5rem;
+      height: 3.5rem;
+      background-color: $background-bright;
+    }
+  }
+
+}

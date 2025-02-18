@@ -1,0 +1,34 @@
+@import "/src/ui/scss/variables";
+@import "/src/ui/scss/mixins";
+
+.chip-container {
+  @include flex-full-center;
+
+  flex-direction: row;
+  width: max-content;
+  gap: 1rem;
+  padding: 0.8rem;
+  height: 1rem;
+  border-radius: 2rem;
+  background-color: $background-bright;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  &__text {
+    @include text-regular;
+    @include text-xl;
+    color: $main;
+  }
+  &:hover {
+    background-color: $main;
+    .chip-container__text {
+      color: $background-bright;
+    }
+
+  }
+  &.active {
+    background-color: $main;
+    .chip-container__text {
+      color: $background-bright;
+    }
+  }
+}

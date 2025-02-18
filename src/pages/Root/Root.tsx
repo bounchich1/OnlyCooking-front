@@ -20,6 +20,12 @@ export default function Root() {
             <Link className="root__link" to="/home">
                 Home page
             </Link>
+            <Link className="root__link" to="/about">
+                About page
+            </Link>
+            <Link className="root__link" to="/contact">
+                Contact page
+            </Link>
         </div>
     )
 }

@@ -1,0 +1,44 @@
+@import "/src/ui/scss/variables";
+@import "/src/ui/scss/mixins";
+
+.icon {
+  @include flex-full-center;
+
+  width: 100%;
+  height: 100%;
+  color: $main;
+  transition: opacity 0.1s ease;
+
+  &__img {
+    width: 100%;
+    height: 100%;
+  }
+
+    &--active {
+      color: $accent;
+    }
+
+  &--small {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  &--default {
+    height: 1.85rem;
+    width: 1.85rem;
+  }
+
+  &--big {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.25;
+  }
+}

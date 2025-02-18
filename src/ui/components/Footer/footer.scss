@@ -1,0 +1,87 @@
+@import "/src/ui/scss/variables";
+@import "/src/ui/scss/mixins";
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+  min-width: max-content;
+  margin-top: 4rem;
+
+  &-sub-text {
+    @include text-light;
+    @include text-lg;
+
+    color: $light;
+  }
+  &-small-text {
+    @include text-regular;
+    @include text-sm;
+
+    color: $light;
+  }
+
+  &-bold-text {
+    @include text-bold;
+    @include text-2xl;
+
+    color: $background;
+  }
+
+  &-link {
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &-container {
+
+    display: flex;
+    flex-direction: row;
+    gap: 8rem;
+    min-width: 50rem;
+    background-color: $main;
+    border-radius: 2rem;
+    height: 20rem;
+    padding: 2rem;
+  }
+
+  &__logo-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+
+    &-start {
+      align-content: start;
+      justify-content: start;
+
+    }
+    &-end {
+      align-content: end;
+      height: 100%;
+      justify-content: end;
+    }
+  }
+
+  &__links-container {
+    @include flex-between;
+
+    width: 100%;
+    padding-right: 2rem;
+
+  }
+
+  &__column-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-content: start;
+    height: 100%;
+    gap: 2rem;
+  }
+
+}

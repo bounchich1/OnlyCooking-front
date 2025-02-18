@@ -1,0 +1,46 @@
+@import "/src/ui/scss/variables";
+@import "/src/ui/scss/mixins";
+
+
+.header-item {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    color: $main;
+    cursor: pointer;
+
+    &-dot {
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    &-text {
+      @include text-xl;
+      @include text-regular;
+      transition: font-weight 0.1s ease;
+    }
+
+    &:hover {
+      transition: all 0.2s ease;
+
+      .header-item-dot {
+        opacity: 1;
+      }
+
+      .header-item-text {
+        @include text-bold;
+      }
+
+    }
+    &.active {
+      .header-item-dot {
+        opacity: 1;
+      }
+
+      .header-item-text {
+        @include text-bold;
+      }
+    }
+
+  }
+

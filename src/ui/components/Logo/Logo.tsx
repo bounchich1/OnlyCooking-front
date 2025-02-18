@@ -6,7 +6,7 @@ interface Props {
     linkTo?: string,
 }
 
-function Logo({ linkTo = "/" }: Props) {
+export default function Logo({ linkTo = "/" }: Props) {
     return (
         <Link
             to={linkTo}
@@ -17,4 +17,4 @@ function Logo({ linkTo = "/" }: Props) {
     )
 }
 
-export default Logo
+
