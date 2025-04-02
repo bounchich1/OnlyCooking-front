@@ -1,0 +1,48 @@
+@import "/src/ui/scss/variables";
+@import "/src/ui/scss/mixins";
+
+.button {
+  height: 2.75rem;
+  border-radius: 1rem;
+  user-select: none;
+  width: 100%;
+
+  &--primary {
+    @include text-regular;
+    @include text-lg;
+
+    border: none;
+    background-color: $text-secondary;
+    transition: all 0.1s ease;
+
+    &:hover {
+      background-color: $main;
+    }
+
+    &:active {
+      background-color: #bd8200;
+    }
+  }
+
+  &--secondary {
+    @include text-lg;
+    @include text-regular;
+
+    background-color: $background;
+    border: 2px solid $accent;
+    color: $light;
+    transition: all 0.1s ease;
+
+    &:hover {
+      border-color: $background-bright;
+    }
+
+    &:active {
+      border-color: $background-bright;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

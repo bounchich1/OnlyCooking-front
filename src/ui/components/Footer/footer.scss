@@ -9,17 +9,22 @@
   width: 100%;
   min-width: max-content;
   margin-top: 4rem;
+  user-select: none;
 
   &-sub-text {
     @include text-light;
     @include text-lg;
 
+    user-select: none;
     color: $light;
+
   }
+
   &-small-text {
     @include text-regular;
     @include text-sm;
 
+    user-select: none;
     color: $light;
   }
 
@@ -39,7 +44,6 @@
   }
 
   &-container {
-
     display: flex;
     flex-direction: row;
     gap: 8rem;
@@ -56,14 +60,12 @@
     max-width: 50%;
 
     &-start {
-      align-content: start;
-      justify-content: start;
-
+      place-content: start start;
     }
+
     &-end {
-      align-content: end;
+      place-content: end end;
       height: 100%;
-      justify-content: end;
     }
   }
 
@@ -78,8 +80,7 @@
   &__column-container {
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    align-content: start;
+    place-content: start start;
     height: 100%;
     gap: 2rem;
   }
